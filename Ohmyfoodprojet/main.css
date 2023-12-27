@@ -83,13 +83,18 @@ li {
   font-size: 24px;
 }
 .functionning__list {
+  cursor: pointer;
   padding-left: 0;
+ 
 }
 @media screen and (min-width: 1024px) {
-  .functionning__list {
+  .functionning__list  {
     display: flex;
     justify-content: space-between;
   }
+}
+.functionning__list :hover {
+  box-shadow: 0px 4px 20px rgba(121, 0, 88, 0.17);
 }
 .functionning__list li {
   display: flex;
@@ -101,9 +106,10 @@ li {
   margin: 1.5em 1.5em;
   font-weight: 500;
   border-radius: 25px;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  background-color: #f6f6f6;
-}
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  
+  }
+
 @media screen and (min-width: 1024px) {
   .functionning__list li {
     width: 20em;
@@ -120,13 +126,11 @@ li {
 }
 
 .fa, .fas {
-  color: grey;
+  color: #9356DC;
   margin-left: 1em;
   margin-right: 1em;
 }
-.fa-mobile-alt:before, .fas-mobile-alt:before {
-  content: "\f3cd";
-}
+
 
 .fa-store {
   color: #9356DC;
@@ -155,7 +159,33 @@ li {
   position: relative;
   background: #ffffff;
   height: 16em;
+  box-shadow: 0 2px 8px rgba(0,0,0,.421)
 }
+.restaurants__card:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+}
+.card--new:hover::before {
+  box-shadow: 1px 4px 20px rgba(0, 135, 102, 0.3);
+}
+.card--new:hover::before {
+  background-color: #a5e5d5;
+}
+.card--new::before {
+  content: "Nouveau";
+  position: absolute;
+  right: 3.53%;
+  top: 5.18%;
+  width: 80px;
+  height: 29px;
+  line-height: 29px;
+  text-align: center;
+  background-color: #99e2d0;
+  color: #008766;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  transition: box-shadow, transform, 0.5s;
+}
+
 .restaurants_image {
   -o-object-fit: cover;
      object-fit: cover;
